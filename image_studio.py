@@ -3,7 +3,9 @@ import requests
 from google import genai
 import os
 import random
+from dotenv import load_dotenv
 
+load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 st.title("MY AI IMAGE GENERATOR")
 st.sidebar.title("Settings")
